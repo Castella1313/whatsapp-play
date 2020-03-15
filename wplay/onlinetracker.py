@@ -37,12 +37,9 @@ async def tracker(target):
                         if is_sound_enabled:
                             playsound('plucky.wav')
                     except:
-                        print("Error: Couldn't play the sound.")
+                        status_file.write("Error: Couldn't play the sound.")
                         is_sound_enabled = False
-                print(
-                    f'{datetime.now().strftime("%d/%m/%Y, %H:%M:%S")}' +
-                    f' - Status: {status}'
-                )
+                
                 status_file.write(
                     f'{datetime.now().strftime("%d/%m/%Y, %H:%M:%S")}' +
                     f' - Status: {status}\n')
